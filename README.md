@@ -12,7 +12,7 @@
 2. 중앙대학교 소프트웨어학부 2학년 재학중
 
 <H2>Contact Me</H2>
-1. email : yeon0isj@gmail.com
-2. Instagram : @oieunn
-3. github : Junyewdd
+1. email : yeon0isj@gmail.com<br/>
+2. Instagram : @oieunn<br/>
+3. github : Junyewdd<br/>
 </div>
