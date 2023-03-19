@@ -4,15 +4,23 @@
 
 ![소개_인사하는 사자](https://user-images.githubusercontent.com/81146131/221498526-e2db6afd-e36d-447c-ab58-58069793bedf.gif)
 
-<H1>안녕하세요 전영은입니다.<H1>
+<H1>안녕하세요! 전영은입니다😊<H1>
 
 
-<H2>About Me</H2>
-1. 2003.07.17.<br/>
-2. 중앙대학교 소프트웨어학부 2학년 재학중
+## About Me
+-  2003.07.17.⭐️<br/>
+-  중앙대학교 소프트웨어학부 2학년⭐️
+-  Likelion 11th in CAU🦁
 
-<H2>Contact Me</H2>
-1. email : yeon0isj@gmail.com<br/>
-2. Instagram : @oieunn<br/>
-3. github : Junyewdd<br/>
+## 📞Contact Me📞
+- email : yeon0isj@gmail.com<br/>
+- Instagram : @oieunn__<br/>
+- github : Junyewdd<br/>
 </div>
+
+
+
+
+
+
+
