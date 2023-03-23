@@ -1,0 +1,31 @@
+body{
+    background-color: #7d9517;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.container a{
+    display: block;
+    font-size: 40px;
+    margin: 30px 0 0 10px;
+}
+
+.container:hover a{
+    opacity: 0.3;
+}
+.container a:hover{
+    opacity: 1;
+}
+.container a:hover:before{
+    margin-right: 10px;
+    content: '|';
+}
