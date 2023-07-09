@@ -3,17 +3,12 @@ import { Input, Inputs, Title, Wrapper, Form } from '../components/Common';
 import { Link, useNavigate } from 'react-router-dom';
 import { styled } from 'styled-components';
 import { login } from '../apis/login';
+import { useForm } from '../hooks/useForm';
 
 const Home = () => {
-    const [id, setId] = useState('');
-    const [pw, setPw] = useState('');
+    const [id, onChangeID] = useForm('');
+    const [pw, onChangePw] = useForm('');
     const router = useNavigate();
-    const onChangeId = (e)=>{
-        setId(e.target.value);
-    }
-    const onChangePw = (e)=>{
-        setPw(e.target.value);
-    }
     const onClick = async()=>{
         //로그인 api
         const result = await login(id, pw);
@@ -28,7 +23,7 @@ const Home = () => {
             <Title>로그인하기</Title>
             <Form>
                 <Inputs>
-                    <Input placeholder="아이디" value={id} onChange={onChangeId}/>
+                    <Input placeholder="아이디" value={id} onChange={onChangeID}/>
                     <Input placeholder="비밀번호" type="password" value={pw} onChange={onChangePw}/>
                 </Inputs>
                 <Button onClick={onClick}>Login</Button>
