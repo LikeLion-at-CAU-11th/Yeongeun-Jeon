@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Input, Inputs, Title, Wrapper } from '../components/Common'
 import { useForm } from '../hooks/useForm';
 import { styled } from 'styled-components';
@@ -10,11 +10,48 @@ const Signup = () => {
   const [pw, onChangePw] = useForm();
   const [name, onChangeName] = useForm();
   const [age, onChangeAge] = useForm();
+  const [wrong, setWrong] = useState(0);
   const router = useNavigate();
   const onClick = async ()=>{
-    //api 처리
-    await signUp(id, pw, name, age);
-    router('/');
+    try{
+      //길이 1 이상 아닌 값들 저장
+      const invalidLength = [];
+      if(id.length <1){
+        invalidLength.push("id");
+      }
+      if(pw.length<1){
+        invalidLength.push("pw");
+      }
+      if(name.length<1){
+        invalidLength.push("name");
+      }
+      if(age.length<1){
+        invalidLength.push("age");
+      }
+      if(invalidLength.length>0){
+        alert(`${invalidLength.join(", ")} must be at least 1 character long.`);
+        setWrong(1);
+      }
+
+      if(wrong === 1){
+        onChangeID({target:{ value: ''}});
+        onChangePw({target:{ value: ''}});
+        onChangeName({target:{ value: ''}});
+        onChangeAge({target:{ value: ''}});
+        router('/signup');
+      }
+      else{
+        //api 처리
+        await signUp(id, pw, name, age);
+        router('/');
+      }
+    }catch(error){
+      onChangeID({target:{ value: ''}});
+      onChangePw({target:{ value: ''}});
+      onChangeName({target:{ value: ''}});
+      onChangeAge({target:{ value: ''}});
+
+    }    
   };
   return (
     <Wrapper>

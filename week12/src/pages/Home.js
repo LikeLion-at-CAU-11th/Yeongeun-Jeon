@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { Input, Inputs, Title, Wrapper, Form } from '../components/Common';
 import { Link, useNavigate } from 'react-router-dom';
 import { styled } from 'styled-components';
