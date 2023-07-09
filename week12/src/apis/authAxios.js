@@ -18,7 +18,7 @@ export const getAuthAxios = (token)=>{
                 localStorage.setItem('access', accessToken);
                 localStorage.setItem('refreshToken', refreshToken);
                 return (await axios.get(error.config.url, error.config)).data;
-            };
+            }
         }
     );
         return authAxios;

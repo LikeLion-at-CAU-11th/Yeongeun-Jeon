@@ -10,13 +10,23 @@ const Home = () => {
     const [pw, onChangePw] = useForm('');
     const router = useNavigate();
     const onClick = async()=>{
-        //로그인 api
-        const result = await login(id, pw);
-        console.log(result);
-        const {accessToken, refreshToken} = result;
-        localStorage.setItem('access', accessToken);
-        localStorage.setItem('refreshToken', refreshToken);
-        router('/mypage');
+        try{
+            //로그인 api
+            const result = await login(id, pw);
+            console.log(result);
+            const {accessToken, refreshToken} = result;
+            localStorage.setItem('access', accessToken);
+            localStorage.setItem('refreshToken', refreshToken);
+            router('/mypage'); 
+        }catch(error){
+            if(error.response.status === 500){
+                // input 칸 초기화
+                onChangeID({target:{ value: ''}});
+                onChangePw({ target: { value: '' }});
+                alert("아이디 또는 비밀번호가 올바르지 않습니다. 다시 입력해주세요");
+            }
+        }
+        
     };
     return (
         <Wrapper>
