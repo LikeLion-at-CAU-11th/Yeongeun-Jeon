@@ -1,7 +1,9 @@
 import axios from "axios";
 import { getNewRefreshToken } from "./refresh";
+import { useNavigate } from "react-router-dom";
 
 export const getAuthAxios = (token)=>{
+    // const router = useNavigate();
     const authAxios = axios.create({
         baseURL: 'http://front.cau-likelion.org',
         headers: {
