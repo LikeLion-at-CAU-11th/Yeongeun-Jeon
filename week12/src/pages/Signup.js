@@ -17,19 +17,19 @@ const Signup = () => {
       //길이 1 이상 아닌 값들 저장
       const invalidLength = [];
       if(id.length <1){
-        invalidLength.push("id");
+        invalidLength.push("아이디");
       }
       if(pw.length<1){
-        invalidLength.push("pw");
+        invalidLength.push("비밀번호");
       }
       if(name.length<1){
-        invalidLength.push("name");
+        invalidLength.push("이름");
       }
       if(age.length<1){
-        invalidLength.push("age");
+        invalidLength.push("나이");
       }
       if(invalidLength.length>0){
-        alert(`${invalidLength.join(", ")} must be at least 1 character long.`);
+        alert(`${invalidLength.join(", ")}를 입력하지 않았습니다. 다시 입력해주세요.`);
         setWrong(1);
       }
 
