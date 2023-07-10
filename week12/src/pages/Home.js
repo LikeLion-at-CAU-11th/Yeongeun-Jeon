@@ -18,6 +18,18 @@ const Home = () => {
             localStorage.setItem('refreshToken', refreshToken);
             router('/mypage'); 
         }catch(error){
+            //길이 1 이상 아닌 값들 저장
+            const invalidLength = [];
+            if(id.length <1){
+                invalidLength.push("아이디");
+            }
+            if(pw.length<1){
+                invalidLength.push("비밀번호");
+            }
+            if(invalidLength.length>0){
+                alert(`${invalidLength.join(", ")}를 입력하지 않았습니다. 다시 입력해주세요.`);
+            }
+
             if(error.response.status === 500){
                 // input 칸 초기화
                 onChangeID({target:{ value: ''}});
