@@ -2,12 +2,17 @@ import {atom} from 'recoil';
 
 export const userNameAtom = atom({
     key: 'userName',
-    default: '홍길동'
+    default: '전영은'
 })
 
 export const emailAtom = atom({
     key: 'email',
-    default: '000'
+    default: 'junyewdd@gmail.com'
+})
+
+export const dateAtom = atom({
+    key: 'date',
+    default: '2003-07-17'
 })
 
 export const isSubmittedAtom = atom({

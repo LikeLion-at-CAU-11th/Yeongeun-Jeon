@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Button } from './common'
 import {ThemeContext} from "../../context/context"
 
-import { isSubmittedAtom, userNameAtom, emailAtom } from '../../recoil/atoms'
+import { isSubmittedAtom, userNameAtom, emailAtom, dateAtom } from '../../recoil/atoms'
 
 import {useRecoilValue, userRecoilValue} from 'recoil';
 
@@ -27,6 +27,7 @@ const Layout = ({children}) => {
 
   const userName = useRecoilValue(userNameAtom);
   const email = useRecoilValue(emailAtom);
+  const birth = useRecoilValue(dateAtom);
   const isSubmitted = useRecoilValue(isSubmittedAtom);
 
   return (
@@ -40,7 +41,7 @@ const Layout = ({children}) => {
         <div>{children}</div>
         <Footer mode={mode.main}>
           {
-            !isSubmitted ? '' : `${userName}의 공간 :: 이메일 : ${email}`
+            !isSubmitted ? '' : `${userName}의 공간 || 이메일 : ${email} || 생년월일 : ${birth}`
           }
 
         </Footer>
