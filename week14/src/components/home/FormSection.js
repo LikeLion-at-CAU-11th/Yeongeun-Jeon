@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react';
 import { Button } from '../layout/common';
 import { ThemeContext } from '../../context/context';
 import Form from './Form';
-import { useNavigate } from 'react-router-dom';
 import { isSubmittedAtom } from '../../recoil/atoms';
 import { useSetRecoilState } from 'recoil';
 import Modal from './Modal';
@@ -17,10 +16,7 @@ const FormSection = () => {
     const closeModal = () => setIsModalOpen(false);
 
     const handleClick = () => {
-        // isSubmitted(true);
-        // navigate('/mypage');
-        openModal();
-        
+        openModal(); 
     }   
 
   return (

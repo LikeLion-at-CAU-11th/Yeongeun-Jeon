@@ -12,8 +12,6 @@ const Modal = ({isOpen, closeModal, isSubmitted}) => {
 
     const navigate = useNavigate();
 
-    // const context = useContext(ThemeContext);
-    // const [mode, setMode] = useState(context.blueTheme);
     const mode = useContext(ThemeContext);
 
     const goToMyPage = ()=>{
@@ -63,7 +61,6 @@ const ModalWrap = styled.div`
   width: 600px;
   height: fit-content;
   border-radius: 15px;
-//   background-color: #fff;
   background-color: ${props=>props.mode};
   position: absolute;
   top: 50%;
@@ -81,18 +78,12 @@ const Button = styled.div`
    font-weight: bold;
    padding: 10px 20px;
    border: none;
-//    background-color: #ababab;
-//    background-color: white;
    border-radius: 10px;
    color: white;
    font-style: italic;
    font-weight: 200;
    cursor: pointer;
    &:hover {
-    //  background-color: #898989;
-    // background-color: ${props=>props.mode}
-    // color: ${props=>props.mode}
-    // color: white;
     background-color: white;
     color: ${props=>props.mode}
 }

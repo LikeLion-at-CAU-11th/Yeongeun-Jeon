@@ -1,11 +1,12 @@
 import React from 'react'
 import {useRecoilState, useResetRecoilState} from 'recoil';
 
-import {userNameAtom, emailAtom} from '../../recoil/atoms.js'
+import {userNameAtom, emailAtom, dateAtom} from '../../recoil/atoms.js'
 
 const Form = ({type, inputType}) => {
     const [userName, setUserName] = useRecoilState(userNameAtom);
     const [email, setEmail] = useRecoilState(emailAtom);
+    const [birth, setBirth] = useRecoilState(dateAtom);
 
     const onChange = (e)=>{
         const data = e.target.value;
@@ -13,8 +14,11 @@ const Form = ({type, inputType}) => {
         if(inputType === '이름'){
             setUserName(data);
         }
-        else{
+        else if(inputType === '이메일'){
             setEmail(data);
+        }
+        else{
+          setBirth(data);
         }
     }
 
