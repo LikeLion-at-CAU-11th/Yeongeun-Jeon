@@ -4,9 +4,6 @@ import FormSection from '../components/home/FormSection'
 
 const Home = () => {
   return (
-    // <Wrapper>
-    //     <FormSection/>
-    // </Wrapper>
     <Wrapper>
         <FormSection />
     </Wrapper>
