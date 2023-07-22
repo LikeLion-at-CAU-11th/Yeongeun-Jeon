@@ -17,7 +17,7 @@ const FormSection = () => {
     const closeModal = () => setIsModalOpen(false);
 
     const handleClick = () => {
-        isSubmitted(true);
+        // isSubmitted(true);
         // navigate('/mypage');
         openModal();
         
@@ -29,7 +29,7 @@ const FormSection = () => {
     <Form type='email' inputType='이메일'/>
     <Form type='date' inputType='생년월일'/>
     <Button mode={mode.button} onClick={handleClick}>제출</Button>
-    <Modal isOpen={isModalOpen} closeModal = {closeModal}/>
+    <Modal isOpen={isModalOpen} closeModal = {closeModal} isSubmitted={isSubmitted}/>
     </>
   )
 }

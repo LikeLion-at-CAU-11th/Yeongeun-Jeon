@@ -4,7 +4,7 @@ import { dateAtom, emailAtom, userNameAtom } from '../../recoil/atoms';
 import { useNavigate } from 'react-router-dom';
 import { styled } from 'styled-components';
 
-const Modal = ({isOpen, closeModal}) => {
+const Modal = ({isOpen, closeModal, isSubmitted}) => {
     const name = useRecoilValue(userNameAtom);
     const email = useRecoilValue(emailAtom);
     const birth = useRecoilValue(dateAtom);
@@ -13,6 +13,7 @@ const Modal = ({isOpen, closeModal}) => {
 
     const goToMyPage = ()=>{
         navigate('/mypage');
+        isSubmitted(true);
     }
 
     return (
