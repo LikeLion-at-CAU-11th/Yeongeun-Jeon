@@ -15,6 +15,8 @@ background-color: ${props=>props.mode};
 color: white;
 padding: 10px;
 border-radius: 24px;
+margin-top: 10px;
+
 `
 
 export const Title = styled.div`

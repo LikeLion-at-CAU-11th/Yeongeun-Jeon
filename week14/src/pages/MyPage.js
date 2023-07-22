@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Button, Title } from '../components/layout/common'
+import { Button, Title, Wrapper } from '../components/layout/common'
 import { ThemeContext } from '../context/context'
 import { userNameAtom, emailAtom, isSubmittedAtom } from '../recoil/atoms';
 import { useResetRecoilState } from 'recoil';
@@ -20,17 +20,12 @@ const MyPage = () => {
         
     }
   return (
-    <>
+    <Wrapper>
     <Title>welcome</Title>
     <Button mode={mode.button} onClick={handleDelete}>리셋</Button>
-    </>
+    </Wrapper>
   )
 }
 
 export default MyPage;
 
-const Wrapper = styled.div`
-display: flex;
-
-
-`
